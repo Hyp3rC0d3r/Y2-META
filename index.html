@@ -1,0 +1,941 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GO&Venture - Travel booking</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <link href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <a href="tel:+01123456790" class="helpline-box">
+
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquires :</p>
+
+            <p class="helpline-number">+01 (123) 4567 90</p>
+          </div>
+
+        </a>
+
+        <a href="#" class="logo">
+          <img src="logo.png" alt="Tourly logo">
+        </a>
+
+        <div class="header-btn-group">
+
+          <button class="search-btn" aria-label="Search">
+          </button>
+
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+
+            <a href="#" class="logo">
+              <img src="logo.png" alt="Tourly logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </div>
+
+          <ul class="navbar-list">
+
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>home</a>
+            </li>
+
+            <li>
+              <a href="#  " class="navbar-link" onclick="openModal()">about us</a>
+            </li>
+
+            <li>
+              <a href="#destination" class="navbar-link" data-nav-link>destination</a>
+            </li>
+
+            <li>
+              <a href="#package" class="navbar-link" data-nav-link>packages</a>
+            </li>
+
+            <li>
+              <a href="#gallery" class="navbar-link" data-nav-link>gallery</a>
+            </li>
+
+            <li>
+              <a href="#contact" class="navbar-link" data-nav-link>contact us</a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <button class="btn btn-primary" onclick="subscribe()">Subscribe</button>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <article class="view">
+
+      <section class="hero" id="home">
+        <div class="container">
+
+          <h2 class="h1 hero-title">Venture to discvover the Philippines</h2>
+
+          <p class="hero-text">
+            GO&Venture is one of the Top Leading Travel Booking Platform in the Philippines. 
+            With an extensive network of partners and suppliers, we provide access to a vast
+            array of travel options, including flights and accomodations. Experience the best
+            of the Philippines and beyond.
+          </p>
+
+          <div class="btn-group" id="form">
+            <button class="btn btn-primary" onclick="learn()">Learn more</button>
+
+            <button class="btn btn-secondary" onclick="goToForm3()">Book now</button>
+          </div>  
+
+        </div>
+      </section>
+
+
+      <section class="tour-search" >
+        <div class="container">
+
+          <form action="" class="tour-search-form" >
+
+            <div class="input-wrapper">
+              <label for="destination" class="input-label">Destination</label>
+              <select name="destination" id="destination" class="input-field" required>
+                  <option value="" disabled selected>Select a Destination</option>
+                  <option value="" disabled>-- Luzon --</option>
+                  <option value="albay" data-price="4500">Mt Mayon, Albay</option>
+                  <option value="tagaytay" data-price="4800">Taal Volcano, Tagaytay</option>
+                  <option value="ilocosSur"data-price="4200">Vigan, Ilocos Sur</option>
+                  <option value="ifugao" data-price="3900">Banaue Rice Terraces, Ifugao </option>
+                  <option value="manila" data-price="5100">Intramuros, Manila</option>
+                  <option value="pangasinan" data-price="4500">Hundred Islands, Pangasinan</option>
+                  <option value="batanes" data-price="5700">Basco, Batanes</option>
+                  <option value="sorsogon" data-price="4800">Donsol, Sorsogon</option>
+                  <option value="palawan" data-price="5400">El Nido, Palawan</option>
+                  <option value="nuevaEcija" data-price="4200">Minalungao Park, Nueva Ecija</option>
+                  <option value="aurora" data-price="4500">Baler, Aurora</option>
+
+                  <option value="" disabled>-- Visayas --</option>
+                  <option value="bohol" data-price="4800">Chocolate Hills, Bohol</option>
+                  <option value="negrosOriental" data-price="4500">Enchanted River, Negros Oriental</option>
+                  <option value="dumaguete" data-price="4200">Twin Lakes, Dumaguete</option>
+                  <option value="aklan" data-price="5700">Boracay, Aklan</option>
+                  <option value="palawan" data-price="5400">Coron, Palawan</option>
+                  <option value="cebu" data-price="4800"> Bantayan Island, Cebu</option>
+                  <option value="negrosOccidental" data-price="4200">The Ruins, Negros Occidental</option>
+                  <option value="siquijor" data-price="4500">Cambugahay Falls, Siquijor</option>
+                  <option value="leyte" data-price="4800">Kalanggaman Island, Leyte</option>
+
+                  <option value="" disabled>-- Mindanao --</option>
+                  <option value="iligan" data-price="4200">Maria Cristina Falls, Iligan City</option>
+                  <option value="davaoDelnorte" data-price="4800">Samal Island, Davao del Norte</option>
+                  <option value="davao" data-price="4500">Philippine Eagle Centre, Davao</option>
+                  <option value="davaoOriental" data-price="4800">Aliwagwag Falls, Davao Oriental</option>
+                  <option value="maguindanao" data-price="4500">Pink Mosque, Maguindanao del Sur</option>
+                  <option value="camiguin" data-price="4800">White Island, Camiguin</option>
+                  <option value="davaoDelsur" data-price="5100">Mount Apo, Davao del Sur</option>
+                  <option value="siargaoIsland" data-price="5400">Cloud 9, Siargao Island</option>
+                  <option value="cagayanDeoro" data-price="4800">Whitewater Rafting, Cagayan De Oro</option>
+                  <option value="southCotabato" data-price="4500">Lake Sebu, South Cotabato</option>
+
+              </select>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="people" class="input-label">Number of Travellers</label>
+
+              <input type="number" name="people" id="people" required placeholder="No.of People" class="input-field" required min="1">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="checkin" class="input-label">Checkin Date</label>
+
+              <input type="date" name="checkin" id="checkin" required class="input-field" required>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="checkout" class="input-label">Checkout Date</label>
+
+              <input type="date" name="checkout" id="checkout" class="input-field" required>
+            </div>
+
+            <button type="button" class="btn btn-secondary" id="inquire-btn">Inquire now</button>
+
+          </form>
+
+        </div>
+      </section>
+
+      <section class="popular" id="destination">
+        <div class="container">
+
+          <p class="section-subtitle">Renowned places</p>
+
+          <h2 class="h2 section-title">Mostly Booked destination</h2>
+
+          <p class="section-text">
+            The Philippines with it's island is trully a treasure trove of breathtaking destinations, 
+            and we've got the most popular destinations. Here are the mostly booked destinations that
+            are flying off the shelves!
+          </p>
+
+          <ul class="popular-list">
+
+            <li class="block"  id="boracay" value="aklan">
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="boracay.jpg" alt="San miguel, italy" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a>Malay, Aklan</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a>Boracay Island, Aklan</a>
+                  </h3>
+
+                  <p class="card-text">
+                    One of the whitest sand beach in the world with its beautiful sunset view.
+                  </p>
+                  <br></br>
+                  <a class="destin-link" onclick="goToForm('aklan')">Book here.</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="block" id="el nido" value="palawan">
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="big.jpg" alt="Burj khalifa, dubai" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">El Nido, Palawan</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Big Lagoon</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Famous for its emerald-green waters sorounded by towering cliffs. 
+                  </p>
+                  <br></br>
+                  <a class="destin-link" onclick="goToForm1('palawan')">Book here.</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="block" id="siargao" value="siargaoIsland">
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="siargao.jpg" alt="Kyoto temple, japan" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Siargao Island, Surigao Del Norte</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Siargao Island</a>
+                  </h3>
+
+                  <p class="card-text">
+                    The Surfing Capital of the Philippines, a heaven for surfers and tourists.
+                  </p>
+                  <br></br>
+                  <a class="destin-link" onclick="goToForm2('siargaoIsland')">Book here.</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <section class="package" id="package">
+        <div class="container">
+
+          <p class="section-subtitle">Limited time Packages</p>
+
+          <h2 class="h2 section-title">Exclusive Packages</h2>
+
+          <p class="section-text">
+            Includes: Round-trip fare, hotel and resort accomodations, daily breakfast and selected meals,
+            guided tours and activities, airport transfer or land transportation.
+          </p>
+
+          <ul class="package-list">
+
+            <li class="block">
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="luzon.jpg" alt="Experience The Great Holiday On Beach" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Luzon Adventure Package</h3>
+
+                  <p class="card-text">
+                    Round trip from manila to Tagaytay(Taal Volcano), Vigan and Laoag, Baguio City, Sagada and Banaue.
+                  </p>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
+
+                        <p class="text">8D/7N</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="people"></ion-icon>
+
+                        <p class="text">max: 5</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="location"></ion-icon>
+
+                        <p class="text">Manila</p>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-price">
+
+                  <div class="wrapper">
+
+                    <p class="reviews">(25 reviews)</p>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                  <p class="price">
+                    ₱74,999
+                    <span>good for 5 person</span>
+                  </p>
+
+                  <button class="btn btn-secondary prevb" data-name="p1" onclick="confirm()">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="block">
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="visayas.jpg" alt="Summer Holiday To The Oxolotan River" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Visayas Island Adventure Package</h3>
+
+                  <p class="card-text">
+                    Round-trip and Island Hopping to Cebu, Bohol Island, Panglao Island, and Siquijor Island.
+                  </p>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
+
+                        <p class="text">6D/5N</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="people"></ion-icon>
+
+                        <p class="text">max: 8</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="location"></ion-icon>
+
+                        <p class="text">Cebu</p>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-price">
+
+                  <div class="wrapper">
+
+                    <p class="reviews">(20 reviews)</p>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                  <p class="price">
+                    ₱89,599
+                    <span>good for 8 person</span>
+                  </p>
+
+                  <button class="btn btn-secondary prevb" data-name="p2">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="block">
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="mindanao.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Mindanao Adventure Package</h3>
+
+                  <p class="card-text">
+                    Exploring Davao(Davao City), Mount Apo Hiking, Camiguin Island, Bukidnon Coutryside Tour.
+                  </p>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
+
+                        <p class="text">7D/6N</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="people"></ion-icon>
+
+                        <p class="text">max: 6</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="location"></ion-icon>
+
+                        <p class="text">Davao</p>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-price">
+
+                  <div class="wrapper">
+
+                    <p class="reviews">(40 reviews)</p>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                  <p class="price">
+                    ₱85,999
+                    <span>good for 6 person</span>
+                  </p>
+
+                  <button class="btn btn-secondary prevb" data-name="p3">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <button class="btn btn-primary" onclick="openPopup()">View All Packages</button>
+
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="container">
+
+          <p class="section-subtitle">Memory Gallery</p>
+
+          <h2 class="h2 section-title">Snip Pictures from our Travelers</h2>
+
+          <p class="section-text">
+            Showcasing the best of the Philippines, captured by our travelers.
+            Get a glimpse of the real Philippines and start planning your dream trip today!
+          </p>
+
+          <ul class="gallery-list">
+
+            <li class="gallery-item block">
+              <figure class="gallery-image">
+                <img src="pic1.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item block">
+              <figure class="gallery-image">
+                <img src="pic5.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item block">
+              <figure class="gallery-image">
+                <img src="pic6.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item block">
+              <figure class="gallery-image">
+                <img src="pic2.webp" alt="Gallery image">
+              </figure>
+            </li>
+
+            <li class="gallery-item block" id="learn">
+              <figure class="gallery-image">
+                <img src="pic3.jpg" alt="Gallery image">
+              </figure>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <section class="cta" id="contact">
+        <div class="container">
+
+          <div class="cta-content">
+            <p class="section-subtitle">Call To Action</p>
+
+            <h2 class="h2 section-title">Ready For Unforgatable Travel. Remember Us!</h2>
+
+          </div>
+
+          <button class="btn btn-secondary">Contact Us !</button>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="footer" id="target">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="logo.png" alt="Tourly logo">
+          </a>
+
+          <p class="footer-text">
+            GO&Venture is one of the Top Leading Travel Booking Platform in the Philippines. 
+            With an extensive network of partners and suppliers, we provide access to a vast
+            array of travel options, including flights and accomodations. Experience the best
+            of the Philippines and beyond.
+          </p>
+
+        </div>
+
+        <div class="footer-contact">
+
+          <h4 class="contact-title">Contact Us</h4>
+
+          <p class="contact-text">
+            Feel free to contact and reach us !!
+          </p>
+
+          <ul>
+
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+
+              <a href="tel:+01123456790" class="contact-link">+63 943 808 3243 </a>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+
+              <a href="mailto:info.tourly.com" class="contact-link">info.GO&Venture.com</a>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+
+              <address>Makati City, Metro MAnila, Philippines</address>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-form" id="subs">
+
+          <p class="form-text">
+            Subscribe our newsletter for more update & news !!
+          </p>
+
+          <form action="" class="form-wrapper">
+            <input type="email" name="email" id="email" class="input-field" placeholder="Enter Your Email" required>
+
+            <button type="submit" class="btn btn-secondary" onclick="openPopup2()">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 <a href="">codewithsadee</a>. All rights reserved
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Term & Condition</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">FAQ</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+<div class="package-prev" id="package-prev">
+  <div class="prev active" data-target="p1">
+    <img src="luzon.jpg" alt="">
+    <h3>Luzon Adventure Package</h3>
+    <div class="stars">
+      <span>(25)</span>
+    </div>
+    <p>Round trip from manila to Tagaytay(Taal Volcano), Vigan and Laoag, Baguio City, Sagada and Banaue. 8 days/ 7 nights good for 5 people</p>
+    <div class="price">₱74,999</div>
+    <div class="buttons">
+      <a href="#package" class="book" onclick="openConfirmation('p1')">Book Now</a>
+      <a href="#package" class="cancel">Cancel</a>
+    </div>
+  </div>
+
+  <div class="prev active" data-target="p2">
+    <img src="visayas.jpg" alt="">
+    <h3>Visayas Island Adventure Package</h3>
+    <div class="stars">
+      <span>(20)</span>
+    </div>
+    <p>Round-trip and Island Hopping to Cebu, Bohol Island, Panglao Island, and Siquijor Island. 6 days/ 5 nights good for 8 people</p>
+    <div class="price">₱89,599</div>
+    <div class="buttons">
+      <a href="#package" class="book" onclick="openConfirmation('p2')">Book Now</a>
+      <a href="#package" class="cancel">Cancel</a>
+    </div>
+  </div>
+
+  <div class="prev active" data-target="p3">
+    <img src="mindanao.jpg" alt="">
+    <h3>Mindanao Adventure Package</h3>
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+      <span>(260)</span>
+    </div>
+    <p>Exploring Davao(Davao City), Mount Apo Hiking, Camiguin Island, Bukidnon Coutryside Tour. 7 days/ 6 nights good for 6 people</p>
+    <div class="price">₱85,999</div>
+    <div class="buttons">
+      <a href="#" class="book" onclick="openConfirmation('p3')" >Book Now</a>
+      <a href="#package" class="cancel">Cancel</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Confirmation Modal -->
+<div class="confirmation">
+  <div class="confirmation-content">
+    <span class="confirmation-close" onclick="closeConfirmation()">&times;</span>
+    <h2>Confirm Your Booking</h2>
+    <img class="confirmation-image" src="" alt="Package Image">
+    <h3 class="confirmation-title"></h3>
+    <p class="confirmation-description"></p>
+    <div class="confirmation-price"></div>
+
+    <!-- OTP Input -->
+    <label for="otp-input">Enter 6-Digit OTP:</label>
+    <input type="text" class="otp-input" maxlength="6" oninput="validateOTP(this)" placeholder="Enter 6-digit OTP">
+
+    <div class="confirmation-buttons">
+      <button onclick="showReceipt2()">Confirm</button>
+      <button onclick="closeConfirmation()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="overlay2"></div>
+    <div id="popup" class="popup">
+      <h2>No More Exclusive Packages</h2>
+      <p>Stay Tuned for Exciting Offers Coming Soon!</p>
+      <div class="button-container">
+          <button class="close-btn1" onclick="closePopup()">Okay</button>
+      </div>
+    </div>
+<div class="overlay" id="overlay"></div>
+
+
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <img src="logo.png" alt="About Us">
+            <button class="close-btn1" onclick="closeModal()">Go Back to Home</button>
+        </div>
+        <div class="modal-body">
+            <h2>GO&VENTURE</h2>
+            <p>
+                Build and design by Jhimwill Malto, Amrell Flores and Nikko Jay Estabillo of BSCS 3-C
+                as a requirement for Semi-final Exam in CS114.
+            </p>
+        </div>
+    </div>
+ 
+    
+<div id="overlay2"></div>
+    <div id="popup2" class="popup2">
+      <h2>Thanks for Subsciption!</h2>
+      <p>You are now always keep updated in our newest services.  You can now avail our exclusive packages!</p>
+      <div class="button-container">
+          <button class="close-btn1" onclick="closePopup2()">Okay</button>
+      </div>
+    </div>
+
+<div class="overlay4" id="overlay4"></div>
+  <div class="modal4" id="modal4">
+      <div class="receipt-modal" id="receipt-modal">
+            <button class="close-btn" onclick="closeReceipt()">×</button>
+            <h2>Payment Receipt</h2>
+            <div class="receipt-content">
+                <p><strong>Reference No:</strong> <span id="ref-number"></span></p>
+                <p><strong>Destination:</strong> <span id="receipt-destination"></span></p>
+                <p><strong>Number of People:</strong> <span id="receipt-people"></span></p>
+                <p><strong>Check-in Date:</strong> <span id="receipt-checkin"></span></p>
+                <p><strong>Check-out Date:</strong> <span id="receipt-checkout"></span></p>
+                <p class="total-price">Total Paid: <span id="receipt-total"></span></p>
+            </div>
+      
+            <button class="done-btn" onclick="closeReceipt()">Done</button>
+  </div>
+
+
+<section class="Confirm">
+  <div class="overlay3" id="overlay3"></div>
+
+    <div class="modal3" id="modal2">
+      <div class="modal2" id="modal2">
+        <button class="close-btn" onclick="closeModal2()">×</button>
+        <img id="destination-img" src="" alt="Destination Image">
+        <label class="destin" id="destination-title"></label>
+        <p id="destination-desc"></p>
+
+        <label>No. of People</label>
+        <input type="number" id="modal-people" min="1" value="1">
+
+        <label>Check-in Date</label>
+        <input type="date" id="modal-checkin">
+
+        <label>Check-out Date</label>
+        <input type="date" id="modal-checkout">
+
+        <p class="total-price">Total Price: <span id="total-price">0</span></p>
+
+        <label>Enter 6-digit OTP</label>
+        <input type="text" id="otp-input" maxlength="6" oninput="validateOTP(this)" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Enter 6-digit OTP">
+
+        <div class="button-container">
+            <button class="btn cancel-btn" onclick="closeModal2()">Cancel</button>
+            <button class="btn confirm-btn" onclick="showReceipt('destination-title','modal-people','modal-checkin','modal-checkout','total-price'); closeModal2();">Verify OTP</button>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <script src="script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+</body>
+
+</html>
