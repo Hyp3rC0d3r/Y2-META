@@ -1961,4 +1961,16 @@ address {
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 18px;
+  }
+}
 
